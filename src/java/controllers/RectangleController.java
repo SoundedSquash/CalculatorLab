@@ -37,8 +37,8 @@ private static final String RESULT_PAGE = "result.jsp";
         response.setContentType("text/html;charset=UTF-8");
         try {
             /* TODO output your page here. You may use following sample code. */
-            double length = Double.parseDouble(request.getParameter("length"));
-            double width = Double.parseDouble(request.getParameter("width"));
+            String length = request.getParameter("length");
+            String width = request.getParameter("width");
             
             RectangleService rs = new RectangleService();
             double area = rs.getArea(length, width);
