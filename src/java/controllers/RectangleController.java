@@ -8,6 +8,7 @@ package controllers;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.System.out;
+import java.text.DecimalFormat;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,10 +43,10 @@ private static final String RESULT_PAGE = "result.jsp";
             
             RectangleService rs = new RectangleService();
             double area = rs.getArea(length, width);
-            
+            DecimalFormat df = new DecimalFormat("0.####");
             request.setAttribute("length", length);
             request.setAttribute("width", width);
-            request.setAttribute("area", area);
+            request.setAttribute("area", df.format(area));
             
             RequestDispatcher view =
                 request.getRequestDispatcher(RESULT_PAGE);
