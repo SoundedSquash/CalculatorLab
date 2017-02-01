@@ -24,6 +24,10 @@ import models.RectangleService;
 @WebServlet(name = "RectangleController", urlPatterns = {"/result"})
 public class RectangleController extends HttpServlet {
 private static final String RESULT_PAGE = "result.jsp";
+private static final String LENGTH = "length";
+private static final String WIDTH = "width";
+private static final String AREA = "area";
+private static final String DECIMAL_FORMAT = "0.####";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -38,15 +42,15 @@ private static final String RESULT_PAGE = "result.jsp";
         response.setContentType("text/html;charset=UTF-8");
         try {
             /* TODO output your page here. You may use following sample code. */
-            String length = request.getParameter("length");
-            String width = request.getParameter("width");
+            String length = request.getParameter(LENGTH);
+            String width = request.getParameter(WIDTH);
             
             RectangleService rs = new RectangleService();
             double area = rs.getArea(length, width);
-            DecimalFormat df = new DecimalFormat("0.####");
-            request.setAttribute("length", length);
-            request.setAttribute("width", width);
-            request.setAttribute("area", df.format(area));
+            DecimalFormat df = new DecimalFormat(DECIMAL_FORMAT);
+            request.setAttribute(LENGTH, length);
+            request.setAttribute(WIDTH, width);
+            request.setAttribute(AREA, df.format(area));
             
             RequestDispatcher view =
                 request.getRequestDispatcher(RESULT_PAGE);
