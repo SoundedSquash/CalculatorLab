@@ -13,7 +13,7 @@
     </head>
     <body style="height:100%">
         <h1>Rectangle Calculator</h1>
-        <p><a href="index.html">Find the area of another rectangle</a>.</p>
+        <p><a href="index.html">Find the area of another shape</a>.</p>
         <h2>${length} * ${width} = ${area}</h2>
         <h3>L * W = A</h3>
         <table style="height: calc(${width} * 1%);">

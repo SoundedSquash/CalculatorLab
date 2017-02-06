@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Circle Calculator</h1>
-        <p><a href="index.html">Find the area of another circle</a>.</p>
+        <p><a href="index.html">Find the area of another shape</a>.</p>
         <h2>π * ${size}<sup>2</sup> = ${area}</h2>
         <h3>π * R<sup>2</sup> = A</h3>
         <table>
