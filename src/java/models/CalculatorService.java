@@ -38,4 +38,16 @@ public class CalculatorService {
         
         return Math.PI * Math.pow(s, 2);
     }
+    
+    public double getTriangleArea(String l, String w){
+        double length = 0;
+        double width = 0;
+        try {
+        length = Double.parseDouble(l);
+        width = Double.parseDouble(w);
+        } catch(NumberFormatException e){
+            throw new NumberFormatException();
+        }
+        return Math.sqrt(Math.pow(length, 2) + Math.pow(width,2));
+    }
 }

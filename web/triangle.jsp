@@ -14,24 +14,22 @@
     <body style="height:100%">
         <h1>Rectangle Calculator</h1>
         <p><a href="index.html">Find the area of another rectangle</a>.</p>
-        <h2>${length} * ${width} = ${area}</h2>
-        <h3>L * W = A</h3>
-        <table style="height: calc(${width} * 1%);">
+        <h2>√<span style="border-top:1px solid black;">${height}<sup>2</sup> * ${base}<sup>2</sup></span> = ${area}</h2>
+        <h3>√<span style="border-top:1px solid black;">H<sup>2</sup> * L<sup>2</sup></span> = A</h3>
+        <table>
             <tr>
-                <td style="text-align:center;">
-                    ${length}
+                <td>
+                    <p style="width: 0; height: 0;border-bottom: ${base}0px solid black;border-left: ${height}0px solid transparent;"></p>
                 </td>
                 <td>
-                    
+                    ${height}
                 </td>
             </tr>
             <tr>
-                <td style="border: 2px solid black; width: calc(${length} * 1em); height: calc(${width} * 1em);">
-                    <center>${area}</center>
-                </td>
                 <td>
-                    ${width}
+                    ${base}
                 </td>
+                <td></td>
             </tr>
         </table>
     </body>
