@@ -6,12 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html style="padding:2%; height:70%;">
+<html style="padding:2%;">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Rectangle Result</title>
     </head>
-    <body style="height:100%">
+    <body>
         <h1>Rectangle Calculator</h1>
         <p><a href="index.html">Find the area of another rectangle</a>.</p>
         <h2>√<span style="border-top:1px solid black;">${height}<sup>2</sup> * ${base}<sup>2</sup></span> = ${area}</h2>
