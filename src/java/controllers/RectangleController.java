@@ -14,7 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import models.RectangleService;
+import models.CalculatorService;
 
 /**
  *
@@ -44,9 +44,9 @@ private static final String DECIMAL_FORMAT = "0.####";
             String length = request.getParameter(LENGTH);
             String width = request.getParameter(WIDTH);
             
-            RectangleService rs = new RectangleService();
+            CalculatorService rs = new CalculatorService();
             DecimalFormat df = new DecimalFormat(DECIMAL_FORMAT);
-            double area = rs.getArea(length, width);
+            double area = rs.getRectangleArea(length, width);
             request.setAttribute(LENGTH, length);
             request.setAttribute(WIDTH, width);
             request.setAttribute(AREA, df.format(area));

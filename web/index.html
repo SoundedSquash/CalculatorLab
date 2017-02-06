@@ -11,7 +11,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-    
+        <h1>Calculator Lab</h1>
     <table id="calculatorTable">
         <tr>
             <td>
@@ -37,12 +37,33 @@ and open the template in the editor.
                             </td>
                         </tr>
                     </table>
+                    <br>
+                    <button type="submit" id="circleSubmit" name="circleSubmit">Calculate</button>
+                </form>
+            </td>
+            <td>
+                <h3>Circle Calculator</h3>
+                <form id="circleForm" name="circleForm" method="post" action="circle">
+                    <table id="circleTable">
+                        <tr>
+                            <td style="border: 2px solid black; width: calc(3 * 20px); height: calc(3 * 20px); border-radius: 30px;">
+
+                            </td>
+                            <td style="text-align:center;">
+                                <label for="type">Size:</label>
+                                <select id="type" name="type">
+                                    <option value="radius" selected="selected">Radius</option>
+                                    <option value="diameter">Diameter</option>
+                                </select>
+                                <input id="size" name="size" type="number" step="any" min="0" style="width: 4em;">
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
                     <button type="submit" id="rectangleSubmit" name="rectangleSubmit">Calculate</button>
                 </form>
             </td>
         </tr>
     </table>
-        <form method="post" action="rectangle">
-        </form>
     </body>
 </html>
