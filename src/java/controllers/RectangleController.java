@@ -6,7 +6,6 @@
 package controllers;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import static java.lang.System.out;
 import java.text.DecimalFormat;
 import javax.servlet.RequestDispatcher;
@@ -21,9 +20,9 @@ import models.RectangleService;
  *
  * @author kanst_000
  */
-@WebServlet(name = "RectangleController", urlPatterns = {"/result"})
+@WebServlet(name = "RectangleController", urlPatterns = {"/rectangle"})
 public class RectangleController extends HttpServlet {
-private static final String RESULT_PAGE = "result.jsp";
+private static final String RESULT_PAGE = "rectangle.jsp";
 private static final String LENGTH = "length";
 private static final String WIDTH = "width";
 private static final String AREA = "area";
@@ -46,8 +45,8 @@ private static final String DECIMAL_FORMAT = "0.####";
             String width = request.getParameter(WIDTH);
             
             RectangleService rs = new RectangleService();
-            double area = rs.getArea(length, width);
             DecimalFormat df = new DecimalFormat(DECIMAL_FORMAT);
+            double area = rs.getArea(length, width);
             request.setAttribute(LENGTH, length);
             request.setAttribute(WIDTH, width);
             request.setAttribute(AREA, df.format(area));

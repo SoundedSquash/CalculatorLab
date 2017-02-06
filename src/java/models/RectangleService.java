@@ -6,6 +6,7 @@
 package models;
 
 import static java.lang.System.out;
+import java.text.DecimalFormat;
 
 /**
  *
@@ -22,5 +23,16 @@ public class RectangleService {
             out.print(e);
         }
         return length*width;
+    }
+    public double getArea(String l, String w, DecimalFormat df) throws NumberFormatException{
+        double length = 0;
+        double width = 0;
+        try {
+            length = Double.parseDouble(l);
+            width = Double.parseDouble(w);
+        } catch(NumberFormatException e){
+            out.print(e);
+        }
+        return Double.parseDouble(df.format(length*width));
     }
 }

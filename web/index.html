@@ -11,15 +11,38 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <form method="post" action="result">
-            <h3>Calculate area of a rectangle:</h3>
-            <label for="length">Length:</label>
-                <input type="number" id="length" name="length" min="0" step="any">
-            <br>
-            <label for="width">Width:</label>
-            <input type="number" id="width" name="width" min="0" step="any">
-            <br>
-            <button type="submit" value="Calculate">Calculate</button>
+    
+    <table id="calculatorTable">
+        <tr>
+            <td>
+                <h3>Rectangle Calculator</h3>
+                <form id="rectangleForm" name="rectangleForm" method="post" action="rectangle">
+                    <table id="rectangleTable">
+                        <tr>
+                            <td style="text-align:center;">
+                                <label for="length">L:</label>
+                                <input id="length" name="length" type="number" step="any" min="0" style="width: 4em;">
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 2px solid black; width: calc(6 * 20px); height: calc(3 * 20px);">
+
+                            </td>
+                            <td>
+                                <label>W:</label>
+                                <input id="width" name="width" type="number" step="any" min="0" style="width: 4em;">
+                            </td>
+                        </tr>
+                    </table>
+                    <button type="submit" id="rectangleSubmit" name="rectangleSubmit">Calculate</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+        <form method="post" action="rectangle">
         </form>
     </body>
 </html>
